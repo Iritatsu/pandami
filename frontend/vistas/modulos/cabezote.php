@@ -1,3 +1,11 @@
+<?php 
+
+$servidor = Ruta::ctrRutaServidor();
+$url = Ruta::ctrRuta();
+
+
+?>
+
 <!--=====================================
 TOP
 ======================================-->
@@ -77,9 +85,9 @@ HEADER
 			
 			<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo">
 				
-				<a href="#">
+				<a href="<?php echo $url; ?>">
 						
-					<img src="http://localhost/pandami/backend/<?php echo $social["logo"]; ?>" class="img-responsive">
+					<img src="<?php echo $servidor.$social["logo"]; ?>" class="img-responsive">
 
 				</a>
 				
@@ -117,7 +125,7 @@ HEADER
 
 					<span class="input-group-btn">
 						
-						<a href="#">
+						<a href="<?php echo $url; ?>buscador/1/recientes">
 
 							<button class="btn btn-default backColor" type="submit">
 								
@@ -176,7 +184,7 @@ HEADER
 				echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
 				
 				<h4>
-					<a href="'.$value["ruta"].'" class="pixelCategorias">'.$value["categoria"].'</a>
+					<a href="'.$url.$value["ruta"].'" class="pixelCategorias">'.$value["categoria"].'</a>
 				</h4>
 
 				<hr>
@@ -189,7 +197,7 @@ HEADER
 
 				foreach($subcategorias as $key => $value){
 
-					echo '<li><a href="'.$value["ruta"].'" class="pixelSubCategorias">'.$value["subcategoria"].'</a></li>';
+					echo '<li><a href="'.$url.$value["ruta"].'" class="pixelSubCategorias">'.$value["subcategoria"].'</a></li>';
 				}
 				echo'</ul>
 			</div>';
