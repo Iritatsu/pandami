@@ -29,9 +29,19 @@ $url = Ruta::ctrRuta();
     <div class="container">
 
         <div class="row">
-            <!-- VISOR DE PRODUCTOS -->
 
-            <div class="col-md-5 col-sm-6 col-xs-12 visorImg">
+        <?php 
+
+            $item = "ruta";
+            $valor = $rutas[0];
+            $infoproducto = ControladorProductos::ctrMostrarInfoProducto($item, $valor);
+            if($infoproducto["tipo"] == "fisico"){
+
+                // <!-- VISOR DE PRODUCTOS -->
+                echo'
+                
+
+                <div class="col-md-5 col-sm-6 col-xs-12 visorImg">
 
                 <figure class="visor">
                     
@@ -63,12 +73,73 @@ $url = Ruta::ctrRuta();
                 
                 </div>
             
-            </div>
-            <!-- PRODUCTO -->
-                <div class="col-md-7 col-sm-6 col-xs-12">
-                    
+            </div>';
+            }else{
+                // VISOR DE VIDEO
+
+                echo ' <div class="col-sm-6 col-xs-12">
+
+                <iframe class="videoPresentacion" src="http://www.youtube.com/embed/N4aY6yX-MaM?rel=0&autoplay=1" width="100%" frameborder="0" allowfullscreen></iframe>     
                 
-         
+                </div>'; 
+            }
+        ?>
+           
+           <?php 
+           
+           if($infoproducto["tipo"] == "fisico"){
+
+                echo'  <div class="col-md-7 col-sm-6 col-xs-12">';
+
+           }else{
+
+            echo'  <div class="col-sm-6 col-xs-12">';
+
+           }
+
+
+           ?>
+            
+            <!-- PRODUCTO -->
+              
+                    
+                <div class="col-xs-6">
+
+                <h6>
+
+                    <a href="javascript:history.back()" class="text-muted" >
+                       <i class="fa fa-reply"></i> Continuar Comprando
+                    </a>
+                </h6>
+
+                </div>
+                <!-- COMPARTIR EN REDES SOCIALES -->
+                <div class="col-xs-6">
+
+                    <h6>
+                        <a class="dropdown-toggle pull-right text-muted" data-toggle="dropdown" href="#">
+                            <i class="fa fa-plus"></i>Compartir
+                        </a>
+                        <ul class="dropdown-menu pull-right compartirRedes">
+                            <li>
+                                <p class="btnFacebook">
+                                    <i class="fa fa-facebook"></i>
+                                    Facebook
+                                </p>
+                            </li>
+                            <li>
+                                <p class="btnGoogle">
+                                    <i class="fa fa-google"></i>
+                                    Google
+                                </p>
+                            </li>
+
+                        </ul>
+                    </h6>
+                </div>
+                
+                <div class="clearfix"></div>
+                <!-- ESPACIO PARA EL PRODUCTO -->
 
                 <!-- ZONA LUPA -->
                 <figure class="lupa">
