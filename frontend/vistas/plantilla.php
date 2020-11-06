@@ -30,6 +30,7 @@
     <!--PLUGINS CSS-->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/flexslider.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
     <!--CSS PERSONALIZADAS-->
@@ -37,10 +38,16 @@
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/css/cabezote.css">
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/css/slide.css">
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/css/productos.css">
+    <link rel="stylesheet" href="<?php echo $url; ?>vistas/css/infoproducto.css">
+
+    
+    
     <!--PLUGINS JS-->
     <script src="<?php echo $url; ?>vistas/js/plugins/jquery.min.js"></script>
     <script src="<?php echo $url; ?>vistas/js/plugins/bootstrap.min.js"></script>
     <script src="<?php echo $url; ?>vistas/js/plugins/jquery.easing.js"></script>
+    <script src="<?php echo $url; ?>vistas/js/plugins/jquery.flexslider.js"></script>
+ 
     
 </head>
 <body>
@@ -117,6 +124,7 @@ if(isset($_GET["ruta"])){
 <script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>  
 <script src="<?php echo $url; ?>vistas/js/slide.js"></script>  
 <script src="<?php echo $url; ?>vistas/js/buscador.js"></script>  
+<script src="<?php echo $url; ?>vistas/js/infoproducto.js"></script>  
 
 </body>
 </html>
