@@ -149,5 +149,26 @@ class ModeloProductos{
         $stmt -> null;
         
     }
+    // ACTUALIZAR VISTA PRODUCTO
+    static public function mdlActualizarVistaProducto($tabla, $datos, $item){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item = :$item WHERE ruta = :ruta");
+
+		$stmt -> bindParam(":ruta", $datos["ruta"], PDO::PARAM_STR);
+		$stmt -> bindParam(":".$item, $datos["valor"], PDO::PARAM_STR);
+
+		if($stmt -> execute()){
+
+			return "ok";
+		
+		}else{
+
+			return "error";	
+
+		}
+
+        $stmt = null;
+        
+    }
  }
 
